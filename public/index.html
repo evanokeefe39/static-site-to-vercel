@@ -19,16 +19,19 @@
             embedded
             gesture-detector
         >
-            <a-assets>
-                <!-- <a-asset-item
-                    id="kickflip"
-                    src="./assets/kickflip.gif"
+            <!-- <a-assets>
+                <a-asset-item
+                    id="Coda crtw - Toronja GB"
+                    src="./assets/Coda crtw - Toronja GB.gif"
                     
-                ></a-asset-item> -->
-       
-              </a-assets>
+                ></a-asset-item>
+            
+            </a-assets> -->
+            <a-assets>
+              <video id="video1" autoplay loop muted playsinline src="Coda_crtw_-_Toronja_GB.mp4"></video>
+            </a-assets>
 
-            <a-marker
+            <!-- <a-marker
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
@@ -39,11 +42,47 @@
                 id="markerA"
             >
                 <a-entity position="0 0 -3" rotation="-90 0 0" scale="2 2 2">
-                    <a-entity geometry="primitive:plane;" material="shader:gif;src:url(kickflip.gif);"></a-entity>
+                    <a-entity geometry="primitive:plane;" material="shader:gif;src:url(Coda_crtw_-_Toronja_GB.gif);"></a-entity>
                 
                 </a-entity>
+            </a-marker> -->
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+              <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="10" width="10"></a-video>
             </a-marker>
+            
             <a-entity camera></a-entity>
         </a-scene>
     </body>
+
+    <script>
+      // Ensure the video plays when the marker is detected
+      document.querySelector('a-marker').addEventListener('markerFound', function() {
+          var video = document.querySelector('#video1');
+          video.play();
+      });
+      
+      // Ensure the video restarts when the marker is lost and found again
+      document.querySelector('a-marker').addEventListener('markerLost', function() {
+          var video = document.querySelector('#video1');
+          video.pause();
+          video.currentTime = 0;
+      });
+
+      // Additional fallback to start the video on load
+      document.addEventListener('DOMContentLoaded', function () {
+          var video = document.querySelector('#video1');
+          video.addEventListener('loadeddata', function() {
+              video.play();
+          });
+      });
+  </script>
 </html>
