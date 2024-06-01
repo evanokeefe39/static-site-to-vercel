@@ -28,7 +28,9 @@
             
             </a-assets> -->
             <a-assets>
-              <video id="video1" autoplay loop muted playsinline src="Coda_crtw_-_Toronja_GB.mp4"></video>
+              <video id="video1" autoplay loop muted playsinline src="1.mp4"></video>
+              <video id="video2" autoplay loop muted playsinline src="2.mp4"></video>
+              <video id="video3" autoplay loop muted playsinline src="3.mp4"></video>
             </a-assets>
 
             <!-- <a-marker
@@ -47,16 +49,29 @@
                 </a-entity>
             </a-marker> -->
             <a-marker
-                id="animated-marker"
+                id="marker-1"
                 type="pattern"
                 preset="custom"
-                url="marker.patt"
+                url="1.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
               <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="7" width="7"></a-video>
+            </a-marker>
+
+            <a-marker
+                id="marker-2"
+                type="pattern"
+                preset="custom"
+                url="2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+              <a-video src="#video2" position="0 0 0" rotation="-90 0 0" height="7" width="7"></a-video>
             </a-marker>
             
             <a-entity camera></a-entity>
@@ -65,24 +80,37 @@
 
     <script>
       // Ensure the video plays when the marker is detected
-      document.querySelector('a-marker').addEventListener('markerFound', function() {
-          var video = document.querySelector('#video1');
-          video.play();
-      });
+    document.querySelector('#marker-1').addEventListener('markerFound', function() {
+        var video = document.querySelector('#video1');
+        video.play();
+    });
       
       // Ensure the video restarts when the marker is lost and found again
-      document.querySelector('a-marker').addEventListener('markerLost', function() {
+      document.querySelector('#marker-1').addEventListener('markerLost', function() {
           var video = document.querySelector('#video1');
           video.pause();
           video.currentTime = 0;
       });
 
-      // Additional fallback to start the video on load
-      document.addEventListener('DOMContentLoaded', function () {
-          var video = document.querySelector('#video1');
-          video.addEventListener('loadeddata', function() {
-              video.play();
-          });
+        // Ensure the video plays when the marker is detected
+    document.querySelector('#marker-2').addEventListener('markerFound', function() {
+        var video = document.querySelector('#video2');
+        video.play();
+    });
+      
+      // Ensure the video restarts when the marker is lost and found again
+      document.querySelector('#marker-2').addEventListener('markerLost', function() {
+          var video = document.querySelector('#video2');
+          video.pause();
+          video.currentTime = 0;
       });
+
+      // Additional fallback to start the video on load
+    //   document.addEventListener('DOMContentLoaded', function () {
+    //       var video = document.querySelector('#video1');
+    //       video.addEventListener('loadeddata', function() {
+    //           video.play();
+    //       });
+    //   });
   </script>
 </html>
