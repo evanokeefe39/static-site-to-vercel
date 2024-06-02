@@ -52,7 +52,7 @@
                 id="marker-1"
                 type="pattern"
                 preset="custom"
-                url="a.patt"
+                url="b.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -60,7 +60,7 @@
             >
               <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
+<!-- 
             <a-marker
                 id="marker-2"
                 type="pattern"
@@ -124,7 +124,7 @@
                 id="markerA"
             >
               <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
-            </a-marker>
+            </a-marker> -->
             
             <a-entity camera></a-entity>
         </a-scene>
@@ -144,70 +144,70 @@
         video.currentTime = 0;
     });
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-2').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video2');
-        video.play();
-    });
+    // // Ensure the video plays when the marker is detected
+    // document.querySelector('#marker-2').addEventListener('markerFound', function() {
+    //     var video = document.querySelector('#video2');
+    //     video.play();
+    // });
       
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-2').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video2');
-        video.pause();
-        video.currentTime = 0;
-    });
+    // // Ensure the video restarts when the marker is lost and found again
+    // document.querySelector('#marker-2').addEventListener('markerLost', function() {
+    //     var video = document.querySelector('#video2');
+    //     video.pause();
+    //     video.currentTime = 0;
+    // });
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-3').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video1');
-        video.play();
-    });
+    // // Ensure the video plays when the marker is detected
+    // document.querySelector('#marker-3').addEventListener('markerFound', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.play();
+    // });
       
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-3').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video1');
-        video.pause();
-        video.currentTime = 0;
-    });
+    // // Ensure the video restarts when the marker is lost and found again
+    // document.querySelector('#marker-3').addEventListener('markerLost', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.pause();
+    //     video.currentTime = 0;
+    // });
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-4').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video1');
-        video.play();
-    });
+    // // Ensure the video plays when the marker is detected
+    // document.querySelector('#marker-4').addEventListener('markerFound', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.play();
+    // });
       
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-4').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video1');
-        video.pause();
-        video.currentTime = 0;
-    });
+    // // Ensure the video restarts when the marker is lost and found again
+    // document.querySelector('#marker-4').addEventListener('markerLost', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.pause();
+    //     video.currentTime = 0;
+    // });
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-5').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video1');
-        video.play();
-    });
+    // // Ensure the video plays when the marker is detected
+    // document.querySelector('#marker-5').addEventListener('markerFound', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.play();
+    // });
       
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-5').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video1');
-        video.pause();
-        video.currentTime = 0;
-    });
+    // // Ensure the video restarts when the marker is lost and found again
+    // document.querySelector('#marker-5').addEventListener('markerLost', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.pause();
+    //     video.currentTime = 0;
+    // });
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-6').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video1');
-        video.play();
-    });
+    // // Ensure the video plays when the marker is detected
+    // document.querySelector('#marker-6').addEventListener('markerFound', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.play();
+    // });
       
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-6').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video1');
-        video.pause();
-        video.currentTime = 0;
-    });
+    // // Ensure the video restarts when the marker is lost and found again
+    // document.querySelector('#marker-6').addEventListener('markerLost', function() {
+    //     var video = document.querySelector('#video1');
+    //     video.pause();
+    //     video.currentTime = 0;
+    // });
 
       // Additional fallback to start the video on load
     //   document.addEventListener('DOMContentLoaded', function () {
