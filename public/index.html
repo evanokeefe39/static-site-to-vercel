@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <title>V1</title>
+    <title>V2</title>
     <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -9,15 +9,17 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
         <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     </head>
-
+    <!-- arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" -->
     <body style="margin: 0; overflow: hidden;">
         <a-scene
+            embedded
+            arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5;"
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            
             id="scene"
-            embedded
+            
             gesture-detector
         >
 
@@ -47,591 +49,80 @@
                 <video id="video21" autoplay loop muted playsinline src="ar_assets/image_21/video_20230524_191156_edit - Simp Shremp.mp4"></video>
                 <video id="video22" autoplay loop muted playsinline src="ar_assets/image_22/Waves_Final_wSound - Joyce Liu.mp4"></video>
             </a-assets>
-       
-            <a-marker
-                id="marker-1"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_1/pattern-4x4_1000-1.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-              <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
+            <a-marker type="barcode" value="1">
+                <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-2"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_2/pattern-4x4_1000-2.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-              <a-video src="#video2" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
+            <a-marker type="barcode" value="2">
+                <a-video src="#video2" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-3"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_3/pattern-4x4_1000-3.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="3">
                 <a-video src="#video3" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-4"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_4/pattern-4x4_1000-4.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="4">
                 <a-video src="#video4" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-5"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_5/pattern-4x4_1000-5.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="5">
                 <a-video src="#video5" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-6"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_6/pattern-4x4_1000-6.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"    
-            >
+            <a-marker type="barcode" value="6">
                 <a-video src="#video6" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            
-            <a-marker
-                id="marker-7"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_7/pattern-4x4_1000-7.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="7">
                 <a-video src="#video7" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-8"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_8/pattern-4x4_1000-8.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="8">
                 <a-video src="#video8" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-9"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_9/pattern-4x4_1000-9.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="9">
                 <a-video src="#video9" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-10"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_10/pattern-4x4_1000-10.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"    
-            >
+            <a-marker type="barcode" value="10">
                 <a-video src="#video10" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-11"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_11/pattern-4x4_1000-11.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="11">
                 <a-video src="#video11" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-12"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_12/pattern-4x4_1000-12.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="12">
                 <a-video src="#video12" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-13"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_13/pattern-4x4_1000-13.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="13">
                 <a-video src="#video13" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-14"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_14/pattern-4x4_1000-14.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="14">
                 <a-video src="#video14" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-15"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_15/pattern-4x4_1000-15.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="15">
                 <a-video src="#video15" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-16"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_16/pattern-4x4_1000-16.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="16">
                 <a-video src="#video16" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-17"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_17/pattern-4x4_1000-17.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="17">
                 <a-video src="#video17" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-18"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_18/pattern-4x4_1000-18.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="18">
                 <a-video src="#video18" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-19"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_19/pattern-4x4_1000-19.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-
-            >   
+            <a-marker type="barcode" value="19">
                 <a-video src="#video19" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-20"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_20/pattern-4x4_1000-20.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="20">
                 <a-video src="#video20" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-21"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_21/pattern-4x4_1000-21.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="21">
                 <a-video src="#video21" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-
-            <a-marker
-                id="marker-22"
-                type="pattern"
-                preset="custom"
-                url="/ar_assets/image_22/pattern-4x4_1000-22.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            <a-marker type="barcode" value="22">
                 <a-video src="#video22" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
-            </a-marker> 
-
-
+            </a-marker>
             
+
+
             <a-entity camera></a-entity>
+       
+
         </a-scene>
     </body>
 
-    <script>
 
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-1').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video1');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-1').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video1');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-2').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video2');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-2').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video2');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-3').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video3');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-3').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video3');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-4').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video4');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-4').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video4');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-5').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video5');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-5').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video5');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-6').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video6');
-        video.play();
-    });
-      
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-6').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video6');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-7').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video7');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-7').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video7');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-8').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video8');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-8').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video8');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-9').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video9');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-9').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video9');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-10').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video10');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-10').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video10');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-11').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video11');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-11').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video11');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-12').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video12');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-12').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video12');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-13').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video13');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-13').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video13');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-14').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video14');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-14').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video14');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-15').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video15');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-15').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video15');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-16').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video16');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-16').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video16');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-17').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video17');
-        video.play();
-    });
-    
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-17').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video17');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-18').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video18');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-18').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video18');
-        video.pause();
-        video.currentTime = 0;
-    });
-    
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-19').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video19');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-19').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video19');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-20').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video20');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-20').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video20');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-21').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video21');
-        video.play();
-    });
-
-    // Ensure the video restarts when the marker is lost and found again
-    document.querySelector('#marker-21').addEventListener('markerLost', function() {
-        var video = document.querySelector('#video21');
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ensure the video plays when the marker is detected
-    document.querySelector('#marker-22').addEventListener('markerFound', function() {
-        var video = document.querySelector('#video22');
-        video.play();
-    });
-
-
-
-    
-
-    //   // Additional fallback to start the video on load
-    // document.addEventListener('DOMContentLoaded', function () {
-    //       var video = document.querySelector('#video3');
-    //       video.addEventListener('loadeddata', function() {
-    //           video.play();
-    //       });
-    //   });
-  </script>
 </html>
