@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <title>V2</title>
+    <title>V3</title>
     <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -26,10 +26,10 @@
         
         
             <a-assets id="assets">
-                <video id="video1" autoplay loop muted playsinline src="ar_assets/image_1/0001_127 - Adam Alfs.mp4"></video>
-                <video id="video2" autoplay loop muted playsinline src="ar_assets/image_2/between - Naomi Bu.mp4"></video>
-                <video id="video3" autoplay loop muted playsinline src="ar_assets/image_3/bYQCUAgmRKpMiuo3QbrgKvHMy2onSbHl9W0jXGBgnX4.mp4"></video>
-                <video id="video4" autoplay loop muted playsinline src="ar_assets/image_4/Coda crtw - Toronja GB.mp4"></video>
+                <video id="video1" autoplay loop muted playsinline src="vids/1.mp4"></video>
+                <video id="video2" autoplay loop muted playsinline src="vids/2.mp4"></video>
+                <!-- <video id="video3" autoplay loop muted playsinline src="ar_assets/image_3/bYQCUAgmRKpMiuo3QbrgKvHMy2onSbHl9W0jXGBgnX4.mp4"></video>
+                <video id="video4" autoplay loop muted playsinline src="vids/4.mp4"></video>
                 <video id="video5" autoplay loop muted playsinline src="ar_assets/image_5/CosmotionFadeOut 1 - Mac Calarco.mp4"></video>
                 <video id="video6" autoplay loop muted playsinline src="ar_assets/image_6/final_hight_music - Angel Arce.mp4"></video>
                 <video id="video7" autoplay loop muted playsinline src="ar_assets/image_7/Flows0xmer_-_Almer_Harahap.mp4"></video>
@@ -47,75 +47,77 @@
                 <video id="video19" autoplay loop muted playsinline src="ar_assets/image_19/video_20230524_191156_edit - Simp Shremp.mp4"></video>
                 <video id="video20" autoplay loop muted playsinline src="ar_assets/image_20/trim.04299E89-8498-4175-BEBF-38771FE177B2 - daniar ainun.MOV"></video>
                 <video id="video21" autoplay loop muted playsinline src="ar_assets/image_21/video_20230524_191156_edit - Simp Shremp.mp4"></video>
-                <video id="video22" autoplay loop muted playsinline src="ar_assets/image_22/Waves_Final_wSound - Joyce Liu.mp4"></video>
+                <video id="video22" autoplay loop muted playsinline src="ar_assets/image_22/Waves_Final_wSound - Joyce Liu.mp4"></video> -->
             </a-assets>
-            <a-marker type="barcode" value="1">
+
+            <a-marker type="barcode" value="1" id="marker-1">
                 <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
+                
             </a-marker>
-            <a-marker type="barcode" value="2">
+            <a-marker type="barcode" value="2" id="marker-2">
                 <a-video src="#video2" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="3">
+            <!-- <a-marker type="barcode" value="3" id="marker-3">
                 <a-video src="#video3" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="4">
+            <a-marker type="barcode" value="4" id="marker-4">
                 <a-video src="#video4" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="5">
+            <a-marker type="barcode" value="5" id="marker-5">
                 <a-video src="#video5" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="6">
+            <a-marker type="barcode" value="6" id="marker-6">
                 <a-video src="#video6" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="7">
+            <a-marker type="barcode" value="7" id="marker-7">
                 <a-video src="#video7" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="8">
+            <a-marker type="barcode" value="8" id="marker-8">
                 <a-video src="#video8" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="9">
+            <a-marker type="barcode" value="9" id="marker-9">
                 <a-video src="#video9" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="10">
+            <a-marker type="barcode" value="10" id="marker-10">
                 <a-video src="#video10" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="11">
+            <a-marker type="barcode" value="11" id="marker-11">
                 <a-video src="#video11" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="12">
+            <a-marker type="barcode" value="12" id="marker-12">
                 <a-video src="#video12" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="13">
+            <a-marker type="barcode" value="13" id="marker-13">
                 <a-video src="#video13" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="14">
+            <a-marker type="barcode" value="14" id="marker-14">
                 <a-video src="#video14" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="15">
+            <a-marker type="barcode" value="15" id="marker-15">
                 <a-video src="#video15" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="16">
+            <a-marker type="barcode" value="16" id="marker-16">
                 <a-video src="#video16" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="17">
+            <a-marker type="barcode" value="17" id="marker-17">
                 <a-video src="#video17" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="18">
+            <a-marker type="barcode" value="18" id="marker-18">
                 <a-video src="#video18" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="19">
+            <a-marker type="barcode" value="19" id="marker-19">
                 <a-video src="#video19" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="20">
+            <a-marker type="barcode" value="20" id="marker-20">
                 <a-video src="#video20" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="21">
+            <a-marker type="barcode" value="21" id="marker-21">
                 <a-video src="#video21" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            <a-marker type="barcode" value="22">
+            <a-marker type="barcode" value="22" id="marker-22">
                 <a-video src="#video22" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
-            
+             -->
 
 
             <a-entity camera></a-entity>
@@ -123,6 +125,40 @@
 
         </a-scene>
     </body>
+    <script>
+
+        for (let i = 1; i < 23; i++) {
+            document.querySelector(`#marker-${i}`).addEventListener('markerFound', function() {
+                console.log(`Marker ${i} found`);
+                var video = document.querySelector(`#video-${i}`);
+                video.play();
+
+            });
+            document.querySelector(`#marker-${i}`).addEventListener('markerLost', function() {
+                console.log(`Marker ${i} lost`);
+                var video = document.querySelector(`#video-${i}`);
+                video.pause();
+                video.currentTime = 0;
+            });
+        }
+        // // Ensure the video plays when the marker is detected
+        // document.querySelector('#marker-1').addEventListener('markerFound', function() {
+        //     var video = document.querySelector('#video1');
+        //     video.play();
+        // });
+          
+        // // Ensure the video restarts when the marker is lost and found again
+        // document.querySelector('#marker-1').addEventListener('markerLost', function() {
+        //     var video = document.querySelector('#video1');
+        //     video.pause();
+        //     video.currentTime = 0;
+        // });
+    
+        
+        
+          
+        
+    </script> 
 
 
 </html>
