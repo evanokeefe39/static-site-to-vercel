@@ -50,11 +50,11 @@
             </a-assets>
 
             <a-marker type="barcode" value="1" id="marker-1">
-                <a-video src="#video1" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
+                <a-video src="#video1" position="-1 1 0" rotation="-90 0 0" height="2" width="2"></a-video>
                 
             </a-marker>
             <a-marker type="barcode" value="2" id="marker-2">
-                <a-video src="#video2" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100"></a-video>
+                <a-video src="#video2" position="-1 1 0" rotation="-90 0 0" height="10" width="10" lerp="duration: 100"></a-video>
             </a-marker>
             <!-- <a-marker type="barcode" value="3" id="marker-3">
                 <a-video src="#video3" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
@@ -135,17 +135,12 @@
             });
             document.querySelector(`#marker-${i}`).addEventListener('markerLost', function() {
                 console.log(`Marker ${i} lost`);
-                var video = document.querySelector(`#video${i}`);
-                video.pause();
-                video.currentTime = 0;
+                // var video = document.querySelector(`#video${i}`);
+                // video.pause();
+                // video.currentTime = 0;
             });
         }
-        // // Ensure the video plays when the marker is detected
-        // document.querySelector('#marker-1').addEventListener('markerFound', function() {
-        //     var video = document.querySelector('#video1');
-        //     video.play();
-        // });
-          
+        
         // // Ensure the video restarts when the marker is lost and found again
         // document.querySelector('#marker-1').addEventListener('markerLost', function() {
         //     var video = document.querySelector('#video1');
