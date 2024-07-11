@@ -25,7 +25,7 @@
         
         
             <a-assets id="assets">
-                <video id="video1" autoplay loop muted playsinline src="vids/1.mp4"></video>
+                <video id="video1" autoplay controls loop muted playsinline webkitplaysinline src="vids/1.mp4"></video>
                 <video id="video2" autoplay loop muted playsinline src="vids/2.mp4"></video>
                 <!-- <video id="video3" autoplay loop muted playsinline src="ar_assets/image_3/bYQCUAgmRKpMiuo3QbrgKvHMy2onSbHl9W0jXGBgnX4.mp4"></video>
                 <video id="video4" autoplay loop muted playsinline src="vids/4.mp4"></video>
@@ -50,11 +50,11 @@
             </a-assets>
 
             <a-marker type="barcode" value="1" id="marker-1">
-                <a-video src="#video1" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100" arjs-video="position: fixed;"></a-video>
+                <a-video id="avideo1" src="#video1" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100" arjs-video="position: fixed;"></a-video>
                 
             </a-marker>
             <a-marker type="barcode" value="2" id="marker-2">
-                <a-video src="#video2" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100" arjs-video="position: fixed;"></a-video>
+                <a-video id="avideo2" src="#video2" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100" arjs-video="position: fixed;"></a-video>
             </a-marker>
             <!-- <a-marker type="barcode" value="3" id="marker-3">
                 <a-video src="#video3" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
@@ -147,6 +147,42 @@
         //     video.pause();
         //     video.currentTime = 0;
         // });
+
+        AFRAME.registerComponent("listener", {
+            init: function() {
+                this.target = document.querySelector('#avideo1'); // your video
+                this.prevPosition = null; // initially there is no position or rotation
+                this.prevRotation = null;
+            },
+
+            tick: function() {
+                if (this.el.object3D.visible) {
+                this.target.setAttribute('visible', 'true')
+
+                if(!this.prevPosition && !this.prevRotation) { 
+                    // there are no values to lerp from - set the initial values
+                    this.target.setAttribute('position', this.el.getAttribute('position'))
+                    this.target.setAttribute('rotation', this.el.getAttribute('rotation'))
+                } else {
+                    // use the previous values to get an approximation 
+                    this.target.object3D.position.lerp(this.prevPosition, 0.1)
+
+                    // this (below) may seem ugly, but the rotation is a euler, not a THREE.Vector3, 
+                    // so to use the lerp function i'm doing some probably unnecessary conversions
+                    let rot = this.target.object3D.rotation.toVector3().lerp(this.prevRotation, 0.1)
+                    this.target.object3D.rotation.setFromVector3(rot)
+                }
+                // update the values
+                this.prevPosition = this.el.object3D.position
+                this.prevRotation = this.el.object3D.rotation
+                } else {
+                // the marker dissapeared - reset the values
+                this.target.setAttribute('visible', 'false')
+                this.prevPosition = null;
+                this.prevRotation = null;
+                }
+            }
+        })
     
         
         
