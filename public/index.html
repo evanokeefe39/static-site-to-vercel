@@ -170,7 +170,7 @@
 
                     // this (below) may seem ugly, but the rotation is a euler, not a THREE.Vector3, 
                     // so to use the lerp function i'm doing some probably unnecessary conversions
-                    let rot = this.target.object3D.rotation.toVector3().lerp(this.prevRotation, 0.1)
+                    let rot = this.target.object3D.rotation.toVector3().lerp(this.prevRotation, 1)
                     this.target.object3D.rotation.setFromVector3(rot)
                 }
                 // update the values
