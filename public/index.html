@@ -49,13 +49,10 @@
                 <video id="video22" autoplay loop muted playsinline src="ar_assets/image_22/Waves_Final_wSound - Joyce Liu.mp4"></video> -->
             </a-assets>
 
-            <a-marker type="barcode" value="1" id="marker-1">
-                <a-video id="avideo1" src="#video1" position="-6 -6 -6" rotation="-90 0 0" height="12" width="12" ></a-video>
-                
-            </a-marker>
-            <a-marker type="barcode" value="2" id="marker-2">
+
+            <!-- <a-marker type="barcode" value="2" id="marker-2">
                 <a-video id="avideo2" src="#video2" position="-6 -6 -6" rotation="-90 0 0" height="10" width="10" lerp="duration: 100" arjs-video="position: fixed;"></a-video>
-            </a-marker>
+            </a-marker> -->
             <!-- <a-marker type="barcode" value="3" id="marker-3">
                 <a-video src="#video3" position="0 0 0" rotation="-90 0 0" height="2" width="2"></a-video>
             </a-marker>
@@ -119,7 +116,11 @@
              -->
 
 
-            <a-entity camera></a-entity>
+            <a-entity camera>
+                <a-marker type="barcode" value="1" id="marker-1">
+                    <a-video id="avideo1" src="#video1" position="-6 -6 -6" rotation="-90 0 0" height="12" width="12" ></a-video>
+                </a-marker>
+            </a-entity>
        
 
         </a-scene>
